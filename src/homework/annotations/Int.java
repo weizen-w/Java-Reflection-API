@@ -1,4 +1,4 @@
-package homework;
+package homework.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -12,6 +12,6 @@ import java.lang.annotation.Target;
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(value = ElementType.FIELD)
-public @interface NotNull {
-  String value = "NOT NULL";
+public @interface Int {
+  String value = "INT";
 }

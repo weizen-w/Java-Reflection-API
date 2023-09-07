@@ -1,5 +1,7 @@
 package homework;
 
+import homework.annotations.*;
+
 import java.util.Objects;
 
 /**
@@ -22,8 +24,7 @@ class Staff {
   public Staff() {
   }
 
-  public Staff(long id, String name, String email) {
-    this.id = id;
+  public Staff(String name, String email) {
     this.name = name;
     this.email = email;
   }
