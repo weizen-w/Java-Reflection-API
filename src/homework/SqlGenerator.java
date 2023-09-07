@@ -16,7 +16,7 @@ public class SqlGenerator {
       Constructor<T> constructor = tableClass.getConstructor();
       T tableClassObj = constructor.newInstance();
       String result = processAnnotations(tableClassObj);
-      return "CREATE TABLE " + tableClass.getSimpleName() + " " + "(" + result + ");";
+      return String.format("CREATE TABLE %s (%s)", tableClass.getSimpleName(), result);
     } catch (ReflectiveOperationException e) {
       throw new IllegalArgumentException(e);
     }
