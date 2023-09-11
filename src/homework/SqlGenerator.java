@@ -38,6 +38,8 @@ public class SqlGenerator {
           String value = generateString(field, annotation.annotationType());
           fieldResult.append(value);
         }
+      } else {
+        throw new NullPointerException("could not prepare statement");
       }
       if (result.isEmpty()) {
         result.append(fieldResult);
